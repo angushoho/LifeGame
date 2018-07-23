@@ -24,5 +24,5 @@ if __name__ == '__main__':
     t = int(args.generation)
 
     i = GameOfLife(w, h)
-    i.initialize(2)
+    i.initialize(p)
     i.proceed(t)

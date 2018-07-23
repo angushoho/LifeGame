@@ -12,6 +12,7 @@ class GameOfLife:
         self.map = [[0] * w for i in range(h)]
     def initialize(self, p = 1):
         center = (self.h // 2, self.w // 2)
+        
         l = len(self.figure[p - 1])
         for i in range(len(self.figure[p - 1])):
             self.set_cell(center, self.figure[p - 1][i][0], self.figure[p - 1][i][1])
@@ -19,7 +20,7 @@ class GameOfLife:
         if p == 1:
             for i in range(len(self.glider)):
                 self.set_cell(center, self.glider[i][0], self.glider[i][1])
-        '''    
+        ''' 
     def set_cell(self, center, _y, _x):
         # print(center[0] + _y)
         # print(center[1] + _x)
@@ -33,11 +34,11 @@ class GameOfLife:
                 # elif map[i][j] == 0:
                 #     print("X")
                 else:
-                    print('  ', end='')
+                    print('   ', end='')
             print("")
         print("")
         print("=" * 10, " new generation ", "=" * 10)
-        time.sleep(1)
+        time.sleep(0.5)
 
 
     def proceed(self, t = 10):
@@ -68,7 +69,7 @@ class GameOfLife:
             next_gen.display()
 
 
-
+'''
 # new_game = GameOfLife(10, 10)
 
 # new_game.initialize(1)
@@ -78,3 +79,4 @@ print("")
 
 # new_game.proceed(10)
 # new_game.display()
+'''
